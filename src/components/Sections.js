@@ -4,8 +4,8 @@ import { Section } from "./Section";
 export function Sections() {
   return (
     <div>
-      {sectionsList.map(({ backgroundColor, title }) => (
-        <Section title={title} backgroundColor={backgroundColor} />
+      {sectionsList.map((section) => (
+        <Section section={section} />
       ))}
     </div>
   );
