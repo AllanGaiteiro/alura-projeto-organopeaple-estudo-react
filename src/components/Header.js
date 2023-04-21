@@ -1,4 +1,4 @@
-import Banner from "./images/banner.png";
+import Banner from "../images/banner.png";
 
 export function Header() {
   return (
