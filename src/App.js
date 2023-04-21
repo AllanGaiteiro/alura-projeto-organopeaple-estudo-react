@@ -1,25 +1,14 @@
-import styled from 'styled-components';
 import './App.css';
-import Banner from './images/banner.png';
-
-const Title = styled.h1`
-font-family: 'Prata';
-font-style: normal;
-font-weight: 400;
-font-size: ${prop => prop.fontSize || '32px'} ;
-line-height: 43px;
-display: flex;
-align-items: center;
-text-align: center;
-color: #212121;
-`
+import { Header } from './components/Header';
+import { Title } from './components/Title';
 
 function App() {
   return (
     <div className="App">
      <Header/>
 
-     <section><Title fontSize="40px">Minha Organização:</Title></section>
+     <section><Title fontSize="40px"
+     color="#6278F7">Minha Organização:</Title></section>
      <section><Title>Programação</Title></section>
      <section><Title>Front End</Title></section>
      <section><Title>Date SCience</Title></section>
@@ -34,7 +23,4 @@ function App() {
 }
 
 export default App;
-function Header() {
-  return <header><img src={Banner} alt="banner" /></header>;
-}
 
