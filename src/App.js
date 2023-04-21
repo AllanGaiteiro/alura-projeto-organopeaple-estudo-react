@@ -1,8 +1,7 @@
 import "./App.css";
 import { Header } from "./components/Header";
-import { Section } from "./components/Section";
+import { Sections } from "./components/Sections";
 import { Title } from "./components/Title";
-import { sections } from "./db/sections";
 
 function App() {
   return (
@@ -13,9 +12,8 @@ function App() {
           Minha Organização:
         </Title>
       </section>
-      {sections.map(({ backgroundColor, title }) => (
-        <Section title={title} backgroundColor={backgroundColor} />
-      ))}
+      <Sections />
+
       <footer>footer</footer>
     </div>
   );

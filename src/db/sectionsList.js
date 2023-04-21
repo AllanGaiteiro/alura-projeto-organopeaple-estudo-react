@@ -1,4 +1,4 @@
-export const sections = [
+export const sectionsList = [
   {
     id: "programming-section",
     backgroundColor: "#D9F7E9",
