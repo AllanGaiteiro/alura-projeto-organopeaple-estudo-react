@@ -3,7 +3,7 @@ import { DescriptionForm } from "./DescriptionForm";
 import { FormEmployerContainer } from "./FormEmployerContainer";
 import { FormFieldInput } from "./FormFieldInput";
 
-export function FormEmployer(setSignSelected) {
+export function FormEmployer({ setSignSelected }) {
   return (
     <FormEmployerContainer>
       <DescriptionForm>
