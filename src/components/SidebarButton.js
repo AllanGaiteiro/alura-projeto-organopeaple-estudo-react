@@ -12,9 +12,12 @@ export const SidebarButton = styled.a`
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border: none;
   cursor: pointer;
+  transition: 0.5s;
   &:hover {
     background-color: ${(props) => props.backgroundColorHover || "#ddd"};
     color: white;
+
+    transform: scale(1.1) translateX(10px);
   }
   i {
     margin: 15px;

@@ -16,10 +16,18 @@ function App() {
       <Header />
       <SectionSignEmployers />
       <Sections />
-
-      <footer>footer</footer>
+      <Footer />
     </AppContainer>
   );
+}
+
+const FooterContainer = styled.footer`
+  background-image: url(../../images/banner.png);
+
+  height: 200px;
+`;
+function Footer() {
+  return <FooterContainer>foodadddddddddter</FooterContainer>;
 }
 
 export default App;

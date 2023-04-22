@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const SidebarContainer = styled.div`
   position: fixed;
-  top: auto;
+  top: 10%;
   left: 0;
-  height: 100vh;
+  height: 80vh;
   width: 80px;
-  background-color: none;
+  border-radius: 0px 40px 40px 0px;
+  background-color: white;
 `;
