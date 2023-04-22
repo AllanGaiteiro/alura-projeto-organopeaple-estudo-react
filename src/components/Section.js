@@ -7,15 +7,15 @@ import { SectionContainer } from "./SectionContainer";
 import { Title } from "./Title";
 
 export function Section({ section }) {
-  const { backgroundColor, title, cardCollor, id } = section;
+  const { brightColor, title, color, id } = section;
   return (
-    <SectionContainer backgroundColor={backgroundColor}>
+    <SectionContainer backgroundColor={brightColor}>
       <Title>{title}</Title>
       <CardList>
         {profileList
           .filter((p) => p.section === id)
           .map((p, i) => (
-            <CardEmployer key={i} cardCollor={cardCollor}>
+            <CardEmployer key={i} cardCollor={color}>
               <ProfileImage src={ProfyleImage} />
               <h2>{p.name}</h2>
               <p>{p.jobTitle}</p>

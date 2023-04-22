@@ -4,9 +4,12 @@ import { Section } from "./Section";
 export function Sections() {
   return (
     <div>
-      {sectionsList.map((section) => (
-        <Section key={section.id} section={section} />
-      ))}
+      {sectionsList.map(
+        (section) =>
+          section.id !== "cadastro" && (
+            <Section key={section.id} section={section} />
+          )
+      )}
     </div>
   );
 }
