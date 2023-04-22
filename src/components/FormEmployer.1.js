@@ -1,7 +1,6 @@
-import styled from "styled-components";
 import { ButtonSubmit } from "./ButtonSubmit";
 import { FormEmployerContainer } from "./FormEmployer";
-import { Input } from "./Input";
+import { FormFieldInput } from "./FormFieldInput";
 
 export function FormEmployer(setSignSelected) {
   return (
@@ -29,22 +28,5 @@ export function FormEmployer(setSignSelected) {
         value="Criar card"
       />
     </FormEmployerContainer>
-  );
-}
-
-const FormFieldContainer = styled.div`
-  text-align: start;
-  margin: 0px 20px;
-`;
-
-function FormFieldInput({ name, placeholder, type }) {
-  return (
-    <FormFieldContainer>
-      <p>{name}:</p>
-      <Input
-        placeholder={placeholder || "digite um valor."}
-        type={type || "text"}
-      />
-    </FormFieldContainer>
   );
 }
