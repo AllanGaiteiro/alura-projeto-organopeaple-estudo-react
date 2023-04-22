@@ -6,7 +6,7 @@ import { SignEmployer } from "./SignEmployer";
 export function SectionSignEmployers() {
   const [signSelected, setSignSelected] = useState(false);
   return (
-    <SectionSignedEmployerContainer>
+    <SectionSignedEmployerContainer id="cadastro">
       {signSelected && <FormEmployer setSignSelected={setSignSelected} />}
       <SignEmployer setSignSelected={setSignSelected} />
     </SectionSignedEmployerContainer>

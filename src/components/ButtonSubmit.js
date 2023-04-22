@@ -15,4 +15,14 @@ export const ButtonSubmit = styled.input`
   text-align: center;
   color: #ffffff;
   border-color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: #4652c7;
+    transition: background-color 0.3s ease-in-out;
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: none;
+    background-color: #4c5ddd;
+  }
 `;
