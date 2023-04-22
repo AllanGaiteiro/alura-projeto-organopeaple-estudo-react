@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardEmployer = styled.div`
-  height: 269.3266906738281px;
+  height: 270px;
   width: 262px;
   margin: 0px 12px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
@@ -12,4 +12,11 @@ export const CardEmployer = styled.div`
     #ffffff 70%,
     ${(props) => props.cardCollor || "black"} 30%
   );
+  /* Adiciona uma transição suave para a propriedade box-shadow */
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    /* Muda a sombra da caixa (box-shadow) quando o mouse passa sobre ele */
+    box-shadow: 7px 7px 25px rgba(0, 0, 0, 0.2);
+  }
 `;
