@@ -5,7 +5,7 @@ export function Sections() {
   return (
     <div>
       {sectionsList.map((section) => (
-        <Section section={section} />
+        <Section key={section.id} section={section} />
       ))}
     </div>
   );

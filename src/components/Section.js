@@ -14,8 +14,8 @@ export function Section({ section }) {
       <CardList>
         {profileList
           .filter((p) => p.section === id)
-          .map((p) => (
-            <CardEmployer cardCollor={cardCollor}>
+          .map((p, i) => (
+            <CardEmployer key={i} cardCollor={cardCollor}>
               <ProfileImage src={ProfyleImage} />
               <h2>{p.name}</h2>
               <p>{p.jobTitle}</p>
