@@ -2,15 +2,15 @@ import { profileList } from "../db/profileList";
 import ProfyleImage from "../images/empregado.jpg";
 import { CardEmployer } from "./CardEmployer";
 import { CardList } from "./CardList";
+import { HeaderSection } from "./HeaderSection";
 import { ProfileImage } from "./ProfileImage";
 import { SectionContainer } from "./SectionContainer";
-import { Title } from "./Title";
 
 export function Section({ section }) {
   const { brightColor, title, color, id } = section;
   return (
     <SectionContainer id={id} backgroundColor={brightColor}>
-      <Title>{title}</Title>
+      <HeaderSection title={title}></HeaderSection>
       <CardList>
         {profileList
           .filter((p) => p.section === id)
