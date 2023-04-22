@@ -7,11 +7,8 @@ export function SectionSignEmployers() {
   const [signSelected, setSignSelected] = useState(false);
   return (
     <SectionSignedEmployerContainer>
-      {!signSelected ? (
-        <SignEmployer setSignSelected={setSignSelected} />
-      ) : (
-        <FormEmployer setSignSelected={setSignSelected} />
-      )}
+      {signSelected && <FormEmployer setSignSelected={setSignSelected} />}
+      <SignEmployer setSignSelected={setSignSelected} />
     </SectionSignedEmployerContainer>
   );
 }

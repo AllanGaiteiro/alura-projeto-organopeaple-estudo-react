@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const SignEmployerContainer = styled.div`
-  width: 930px;
+  position: relative;
+  width: 1440px;
   display: flex;
   justify-content: center;
   margin: 40px auto;
