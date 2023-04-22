@@ -1,11 +1,14 @@
 import { ButtonSubmit } from "./ButtonSubmit";
+import { DescriptionForm } from "./DescriptionForm";
 import { FormEmployerContainer } from "./FormEmployer";
 import { FormFieldInput } from "./FormFieldInput";
 
 export function FormEmployer(setSignSelected) {
   return (
     <FormEmployerContainer>
-      <p>Preencha os dados para criar o card do colaborador.</p>
+      <DescriptionForm>
+        Preencha os dados para criar o card do colaborador.
+      </DescriptionForm>
       <FormFieldInput
         name="Nome"
         placeholder="Digite o nome do empregado"
