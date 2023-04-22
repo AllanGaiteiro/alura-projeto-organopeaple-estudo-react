@@ -9,7 +9,6 @@ import { SidebarButton } from "./components/SidebarButton";
 function App() {
   return (
     <div className="App">
-      {/* Inclui o sidebar */}
       <Sidebar>
         <SidebarButton>1</SidebarButton>
         <SidebarButton>2</SidebarButton>
