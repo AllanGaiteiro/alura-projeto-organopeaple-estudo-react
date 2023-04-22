@@ -7,6 +7,7 @@ export function Sidebar() {
     <SidebarContainer>
       {sectionsList.map((item, i) => (
         <SidebarButton
+          href={"#" + item.id}
           backgroundColor={item.brightColor}
           backgroundColorHover={item.color}
           color={item.id === "cadastro" && "white"}

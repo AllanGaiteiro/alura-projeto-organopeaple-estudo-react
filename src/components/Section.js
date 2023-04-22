@@ -9,7 +9,7 @@ import { Title } from "./Title";
 export function Section({ section }) {
   const { brightColor, title, color, id } = section;
   return (
-    <SectionContainer backgroundColor={brightColor}>
+    <SectionContainer id={id} backgroundColor={brightColor}>
       <Title>{title}</Title>
       <CardList>
         {profileList
