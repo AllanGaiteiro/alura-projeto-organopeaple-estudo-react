@@ -9,7 +9,11 @@ export function SignEmployer({ setSignSelected }) {
         Minha Organização:
       </Title>
 
-      <img src={BtnImage} alt="" onClick={() => setSignSelected(true)} />
+      <img
+        src={BtnImage}
+        alt="imagen do empregado"
+        onClick={() => setSignSelected(true)}
+      />
     </SignEmployerContainer>
   );
 }

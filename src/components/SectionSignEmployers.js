@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { FormEmployer } from "./FormEmployer";
-import { SectionSignedEmployer } from "./SectionSignedEmployer";
+import { SectionSignedEmployerContainer } from "./SectionSignedEmployerContainer";
 import { SignEmployer } from "./SignEmployer";
 
 export function SectionSignEmployers() {
   const [signSelected, setSignSelected] = useState(false);
   return (
-    <SectionSignedEmployer>
-      {!signSelected && <SignEmployer setSignSelected={setSignSelected} />}
-      {signSelected && <FormEmployer setSignSelected={setSignSelected} />}
-    </SectionSignedEmployer>
+    <SectionSignedEmployerContainer>
+      {!signSelected ? (
+        <SignEmployer setSignSelected={setSignSelected} />
+      ) : (
+        <FormEmployer setSignSelected={setSignSelected} />
+      )}
+    </SectionSignedEmployerContainer>
   );
 }
