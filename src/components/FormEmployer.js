@@ -1,12 +1,35 @@
-import styled from "styled-components";
+import { ButtonSubmit } from "./ButtonSubmit";
+import { DescriptionForm } from "./DescriptionForm";
+import { FormEmployerContainer } from "./FormEmployerContainer";
+import { FormFieldInput } from "./FormFieldInput";
 
-export const FormEmployerContainer = styled.form`
-  width: 930px;
-  border-radius: 20px;
-  background: #f6f6f6;
-  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  margin: 80px auto;
-  padding: 30px 80px;
-  text-align: start;
-`;
+export function FormEmployer(setSignSelected) {
+  return (
+    <FormEmployerContainer>
+      <DescriptionForm>
+        Preencha os dados para criar o card do colaborador.
+      </DescriptionForm>
+      <FormFieldInput
+        name="Nome"
+        placeholder="Digite o nome do empregado"
+        type="text"
+      ></FormFieldInput>
+      <FormFieldInput
+        name="Cargo"
+        placeholder="Digite seu cargo na empresa atual."
+        type="text"
+      ></FormFieldInput>
+      <FormFieldInput
+        name="Imagen"
+        placeholder="Adcione o Link da Imagem"
+        type="text"
+      ></FormFieldInput>
+
+      <ButtonSubmit
+        type="submit"
+        onClick={() => setSignSelected(false)}
+        value="Criar card"
+      />
+    </FormEmployerContainer>
+  );
+}
