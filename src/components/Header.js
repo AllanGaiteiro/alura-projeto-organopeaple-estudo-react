@@ -1,9 +1,10 @@
 import Banner from "../images/banner.png";
+import { HeaderImage } from "./HeaderImage";
 
 export function Header() {
   return (
     <header>
-      <img src={Banner} alt="banner" />
+      <HeaderImage src={Banner} alt="banner" />
     </header>
   );
 }
