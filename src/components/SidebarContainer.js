@@ -8,4 +8,5 @@ export const SidebarContainer = styled.div`
   width: 80px;
   border-radius: 0px 40px 40px 0px;
   background-color: white;
+  z-index: 10;
 `;

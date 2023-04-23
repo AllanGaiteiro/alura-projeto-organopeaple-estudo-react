@@ -1,27 +1,25 @@
+import { useEffect, useState } from "react";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import { profileList } from "../db/profileList";
-import ProfyleImage from "../images/empregado.jpg";
-import { CardEmployer } from "./CardEmployer";
-import { CardList } from "./CardList";
+import { CardCarousel } from "./CardCarousel";
 import { HeaderSection } from "./HeaderSection";
-import { ProfileImage } from "./ProfileImage";
 import { SectionContainer } from "./SectionContainer";
 
 export function Section({ section }) {
+  const [employers, setEmployers] = useState([]);
   const { brightColor, title, color, id } = section;
+
+  useEffect(() => {
+    setEmployers(profileList.filter((p) => p.section === id));
+  }, []);
+
   return (
     <SectionContainer id={id} backgroundColor={brightColor}>
       <HeaderSection title={title}></HeaderSection>
-      <CardList>
-        {profileList
-          .filter((p) => p.section === id)
-          .map((p, i) => (
-            <CardEmployer key={i} cardCollor={color}>
-              <ProfileImage src={ProfyleImage} />
-              <h2>{p.name}</h2>
-              <p>{p.jobTitle}</p>
-            </CardEmployer>
-          ))}
-      </CardList>
+      {employers.length > 0 && (
+        <CardCarousel cardCollor={color} employers={employers} />
+      )}
     </SectionContainer>
   );
 }

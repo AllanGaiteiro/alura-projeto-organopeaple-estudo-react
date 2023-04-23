@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const CardEmployer = styled.div`
   height: 270px;
-  width: 262px;
+  max-width: 262px;
   margin: 0px 12px;
+
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background-image: linear-gradient(
@@ -12,7 +13,6 @@ export const CardEmployer = styled.div`
     #ffffff 70%,
     ${(props) => props.cardCollor || "black"} 30%
   );
-  /* Adiciona uma transição suave para a propriedade box-shadow */
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
