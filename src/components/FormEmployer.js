@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { sectionsList } from "../db/sectionsList";
 import { ButtonSubmit } from "./ButtonSubmit";
 import { DescriptionForm } from "./DescriptionForm";
 import { FormEmployerContainer } from "./FormEmployerContainer";
 import { FormFieldInput } from "./FormFieldInput";
+import { Select } from "./Select";
 
 export function FormEmployer({ setSignSelected }) {
   const [formValues, setFormValues] = useState({});
+  const [options, setOptions] = useState([]);
+
+  useEffect(() => {
+    setOptions(sectionsList || []);
+  }, []);
 
   const handleChangeValues = (event) => {
     const fieldName = event.target.name;
@@ -52,6 +59,14 @@ export function FormEmployer({ setSignSelected }) {
         placeholder="Adcione o Link da Imagem"
         type="text"
       ></FormFieldInput>
+
+      <Select
+        LabelName="Times"
+        formName="section"
+        formValues={formValues}
+        options={options}
+        onChange={handleChangeValues}
+      ></Select>
 
       <ButtonSubmit
         type="submit"
