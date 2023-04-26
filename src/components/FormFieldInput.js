@@ -2,13 +2,16 @@ import { FormFieldContainer } from "./FormFieldContainer";
 import { FormFieldName } from "./FormFieldName";
 import { Input } from "./Input";
 
-export function FormFieldInput({ name, placeholder, type }) {
+export function FormFieldInput(props) {
   return (
     <FormFieldContainer>
-      <FormFieldName>{name}</FormFieldName>
+      <FormFieldName>{props.labelName}</FormFieldName>
       <Input
-        placeholder={placeholder || "digite um valor."}
-        type={type || "text"}
+        name={props.formName}
+        value={props.formValues[props.formName]}
+        onChange={props.onChange}
+        placeholder={props.placeholder || "digite um valor."}
+        type={props.type || "text"}
       />
     </FormFieldContainer>
   );
